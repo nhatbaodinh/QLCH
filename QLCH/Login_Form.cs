@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace QLCH
 {
-    public partial class Form1 : Form
+    public partial class Login_Form : Form
     {
-        public Form1()
+        public Login_Form()
         {
             InitializeComponent();
+        }
+
+        private void Login_Form_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }

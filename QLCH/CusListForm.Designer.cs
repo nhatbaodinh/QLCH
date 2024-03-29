@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonRefresh = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -41,22 +41,23 @@
             this.dataGridView1.Size = new System.Drawing.Size(776, 360);
             this.dataGridView1.TabIndex = 0;
             // 
-            // button1
+            // buttonRefresh
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(312, 388);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(176, 45);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Tải lại";
-            this.button1.UseVisualStyleBackColor = true;
+            this.buttonRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonRefresh.Location = new System.Drawing.Point(312, 388);
+            this.buttonRefresh.Name = "buttonRefresh";
+            this.buttonRefresh.Size = new System.Drawing.Size(176, 45);
+            this.buttonRefresh.TabIndex = 1;
+            this.buttonRefresh.Text = "Tải lại";
+            this.buttonRefresh.UseVisualStyleBackColor = true;
+            this.buttonRefresh.Click += new System.EventHandler(this.buttonRefresh_Click);
             // 
             // CusListForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.buttonRefresh);
             this.Controls.Add(this.dataGridView1);
             this.Name = "CusListForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -70,6 +71,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonRefresh;
     }
 }

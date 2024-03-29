@@ -16,8 +16,8 @@ namespace QLCH
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new Main_Form());
-            Login_Form fLogin = new Login_Form();
+            Application.Run(new Main_Form());
+            /*Login_Form fLogin = new Login_Form();
             if (fLogin.ShowDialog() == DialogResult.OK)
             {
                 Application.Run(new Main_Form());
@@ -25,7 +25,7 @@ namespace QLCH
             else
             {
                 Application.Exit();
-            }
+            }*/
         }
     }
 }

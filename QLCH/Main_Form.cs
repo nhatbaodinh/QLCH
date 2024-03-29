@@ -25,7 +25,8 @@ namespace QLCH
 
         private void editCusToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            EditCusForm editCusF = new EditCusForm();
+            editCusF.Show(this);
         }
 
         private void listCusToolStripMenuItem_Click(object sender, EventArgs e)

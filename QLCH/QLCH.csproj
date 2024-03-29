@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddCusForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddCusForm.Designer.cs">
+      <DependentUpon>AddCusForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login_Form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -61,8 +67,14 @@
     <Compile Include="MY_DB.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AddCusForm.resx">
+      <DependentUpon>AddCusForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login_Form.resx">
       <DependentUpon>Login_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main_Form.resx">
+      <DependentUpon>Main_Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

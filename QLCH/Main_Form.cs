@@ -16,5 +16,26 @@ namespace QLCH
         {
             InitializeComponent();
         }
+
+        private void addCusToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddCusForm addCusF = new AddCusForm();
+            addCusF.Show(this);
+        }
+
+        private void editCusToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listCusToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void printCusToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

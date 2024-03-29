@@ -41,34 +41,17 @@ namespace QLCH
 
             using (SqlConnection connection = MY_DB.GetConnection())
             {
-                string query = @"SELECT NV.MaCV 
-                        FROM TAIKHOANNHANVIEN TK 
-                        INNER JOIN NHANVIEN NV ON TK.MaNV = NV.MaNV 
-                        WHERE TK.TenTaiKhoan = @username AND TK.MatKhau = @password";
+                string query = @"SELECT COUNT(*) FROM TAIKHOANNHANVIEN WHERE TenTaiKhoan = @username AND MatKhau = @password";
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
                     command.Parameters.Add("@username", SqlDbType.NVarChar).Value = username;
                     command.Parameters.Add("@password", SqlDbType.NVarChar).Value = password;
 
-                    SqlDataReader reader = command.ExecuteReader();
-                    if (reader.Read())
+                    int userCount = (int)command.ExecuteScalar();
+                    if (userCount > 0)
                     {
-                        int role = reader.GetInt32(0); // Lấy MaCV của người dùng
-                        switch (role)
-                        {
-                            case 1:
-                                MessageBox.Show("Đăng nhập thành công với vai trò Chủ tòa nhà!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                // Thực hiện hành động tương ứng với vai trò này
-                                break;
-                            case 2:
-                                MessageBox.Show("Đăng nhập thành công với vai trò Thư ký!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                // Thực hiện hành động tương ứng với vai trò này
-                                break;
-                            // Xử lý các vai trò khác ở đây
-                            default:
-                                MessageBox.Show("Vai trò người dùng không xác định.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                                break;
-                        }
+                        MessageBox.Show("Đăng nhập thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.DialogResult = DialogResult.OK;
                     }
                     else
                     {

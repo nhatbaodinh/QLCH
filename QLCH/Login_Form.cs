@@ -39,9 +39,9 @@ namespace QLCH
                 return;
             }
 
-            using (SqlConnection connection = MY_DB.GetConnection())
+            using (SqlConnection connection = MY_DB.OpenConnection())
             {
-                string query = @"SELECT COUNT(*) FROM TAIKHOANNHANVIEN WHERE TenTaiKhoan = @username AND MatKhau = @password";
+                string query = @"SELECT COUNT(*) FROM TAIKHOANNHANVIEN WHERE TenDangNhap = @username AND MatKhau = @password";
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
                     command.Parameters.Add("@username", SqlDbType.NVarChar).Value = username;
@@ -50,7 +50,6 @@ namespace QLCH
                     int userCount = (int)command.ExecuteScalar();
                     if (userCount > 0)
                     {
-                        MessageBox.Show("Đăng nhập thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         this.DialogResult = DialogResult.OK;
                     }
                     else

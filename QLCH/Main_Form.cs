@@ -30,7 +30,8 @@ namespace QLCH
 
         private void listCusToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            CusListForm showlistCusForm = new CusListForm();
+            showlistCusForm.Show(this);
         }
 
         private void printCusToolStripMenuItem_Click(object sender, EventArgs e)

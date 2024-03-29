@@ -14,7 +14,7 @@ namespace QLCH
         public static string connectionString = @"Data Source=PC\SQLEXPRESS;Initial Catalog=QLCH;Integrated Security=True;Encrypt=False";
 
         // Phương thức để mở kết nối đến cơ sở dữ liệu
-        public static SqlConnection GetConnection()
+        public static SqlConnection OpenConnection()
         {
             SqlConnection connection = new SqlConnection(connectionString);
             if (connection.State != System.Data.ConnectionState.Open)
@@ -28,5 +28,7 @@ namespace QLCH
             if (connection.State != System.Data.ConnectionState.Closed)
                 connection.Close();
         }
+
     }
+
 }

@@ -52,6 +52,13 @@
     <Compile Include="AddCusForm.Designer.cs">
       <DependentUpon>AddCusForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="CusListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CusListForm.Designer.cs">
+      <DependentUpon>CusListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customer.cs" />
     <Compile Include="Login_Form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,6 +76,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AddCusForm.resx">
       <DependentUpon>AddCusForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CusListForm.resx">
+      <DependentUpon>CusListForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login_Form.resx">
       <DependentUpon>Login_Form.cs</DependentUpon>

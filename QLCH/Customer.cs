@@ -51,4 +51,25 @@ internal class Customer
             return false;
         }
     }
+
+    public DataTable GetCustomers()
+    {
+        DataTable dt = new DataTable();
+
+        try
+        {
+            using (SqlConnection connection = MY_DB.OpenConnection())
+            {
+                SqlCommand command = new SqlCommand("SELECT * FROM NGUOITHUE", connection);
+                SqlDataAdapter adapter = new SqlDataAdapter(command);
+                adapter.Fill(dt);
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex.Message);
+        }
+
+        return dt;
+    }
 }

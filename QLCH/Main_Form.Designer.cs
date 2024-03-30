@@ -33,8 +33,6 @@
             this.addCusToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editCusToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listCusToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cĂNHỘToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tHỐNGKÊToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.PrinttoolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -43,9 +41,7 @@
             // 
             this.menuStrip1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.khachhang,
-            this.cĂNHỘToolStripMenuItem,
-            this.tHỐNGKÊToolStripMenuItem});
+            this.khachhang});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 33);
@@ -88,18 +84,6 @@
             this.listCusToolStripMenuItem.Text = "Danh sách";
             this.listCusToolStripMenuItem.Click += new System.EventHandler(this.listCusToolStripMenuItem_Click);
             // 
-            // cĂNHỘToolStripMenuItem
-            // 
-            this.cĂNHỘToolStripMenuItem.Name = "cĂNHỘToolStripMenuItem";
-            this.cĂNHỘToolStripMenuItem.Size = new System.Drawing.Size(98, 29);
-            this.cĂNHỘToolStripMenuItem.Text = "CĂN HỘ";
-            // 
-            // tHỐNGKÊToolStripMenuItem
-            // 
-            this.tHỐNGKÊToolStripMenuItem.Name = "tHỐNGKÊToolStripMenuItem";
-            this.tHỐNGKÊToolStripMenuItem.Size = new System.Drawing.Size(120, 29);
-            this.tHỐNGKÊToolStripMenuItem.Text = "THỐNG KÊ";
-            // 
             // PrinttoolStripMenuItem
             // 
             this.PrinttoolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -132,8 +116,6 @@
         private System.Windows.Forms.ToolStripMenuItem khachhang;
         private System.Windows.Forms.ToolStripMenuItem addCusToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listCusToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem cĂNHỘToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem tHỐNGKÊToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editCusToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem PrinttoolStripMenuItem;
     }

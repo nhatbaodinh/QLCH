@@ -35,9 +35,10 @@ namespace QLCH
             showlistCusForm.Show(this);
         }
 
-        private void printCusToolStripMenuItem_Click(object sender, EventArgs e)
+        private void PrinttoolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            PrintCusForm printCus = new PrintCusForm();
+            printCus.Show(this);
         }
     }
 }

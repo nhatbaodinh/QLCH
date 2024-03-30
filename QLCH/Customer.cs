@@ -72,4 +72,42 @@ internal class Customer
 
         return dt;
     }
+
+    public DataTable GetFilteredCustomers(string gender, DateTime fromDate, DateTime toDate, bool filterByGender, bool filterByDate)
+    {
+        DataTable dt = new DataTable();
+
+        try
+        {
+            using (SqlConnection connection = MY_DB.OpenConnection())
+            {
+                string query = "SELECT * FROM NGUOITHUE WHERE 1 = 1";
+                SqlCommand command = new SqlCommand(query, connection);
+
+                if (filterByGender && !string.IsNullOrEmpty(gender))
+                {
+                    query += " AND GioiTinh = @gender";
+                    command.Parameters.AddWithValue("@gender", gender);
+                }
+
+                if (filterByDate && fromDate != DateTime.MinValue && toDate != DateTime.MaxValue)
+                {
+                    query += " AND NgaySinh BETWEEN @fromDate AND @toDate";
+                    command.Parameters.AddWithValue("@fromDate", fromDate);
+                    command.Parameters.AddWithValue("@toDate", toDate);
+                }
+
+                command.CommandText = query;
+
+                SqlDataAdapter adapter = new SqlDataAdapter(command);
+                adapter.Fill(dt);
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex.Message);
+        }
+
+        return dt;
+    }
 }
